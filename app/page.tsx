@@ -1,7 +1,16 @@
-import { projects } from "@/lib/constants";
+"use client";
+
+import { projects, testimonials } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useState } from "react";
+import { BiArrowFromBottom } from "react-icons/bi";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Home() {
+  const [selectedTesimonial, setSelectedTesimonial] = useState(testimonials[0]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <div className="bg-gray-50">
       {/* Hero */}
@@ -9,7 +18,7 @@ export default function Home() {
         <div className="flex flex-wrap">
           <div className="w-full lg:w-5/12 px-4 mb-6 lg:mb-0">
             <div className="flex flex-col h-full">
-              <div className="block w-full h-[400px] mb-6 rounded-3xl bg-pink-400"></div>
+              <div className="block w-full h-[400px] mb-6 rounded-3xl bg-gray-400"></div>
               <div className="p-10 bg-white rounded-3xl flex flex-col space-y-20">
                 <h1 className="max-w-xs md:max-w-md font-heading text-5xl sm:text-7xl mb-4 tracking-tighter">
                   Als muren konden praten...
@@ -33,14 +42,14 @@ export default function Home() {
           </div>
           <div className="w-full lg:w-7/12 px-4">
             <div className="relative h-[500px] lg:h-full">
-              <div className="block h-full w-full rounded-3xl bg-pink-400"></div>
+              <div className="block h-full w-full rounded-3xl bg-gray-400"></div>
             </div>
           </div>
         </div>
       </section>
       {/* Quote */}
       <section className="bg-white py-24">
-        <p className="mx-auto max-w-xl text-center text-xl">
+        <p className="mx-auto px-8 max-w-xl text-center text-xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit eaque
           totam aliquid veritatis assumenda temporibus harum unde!
         </p>
@@ -66,12 +75,13 @@ export default function Home() {
                   <div key={index} className="w-full mb-20 lg:mb-0">
                     <a className="group block" href="#">
                       <div className="relative h-96 mb-8 rounded-5xl overflow-hidden">
-                        <div className="absolute left-0 top-0 h-full w-full group-hover:bg-opacity-10 group-hover:bg-black transition duration-200"></div>
-                        <img
+                        <div className="absolute left-0 top-0 h-full w-full rounded-3xl group-hover:bg-opacity-10 group-hover:bg-black transition duration-200"></div>
+                        <div className="w-full h-full bg-gray-400 rounded-3xl"></div>
+                        {/* <img
                           className="block w-full h-full object-cover"
                           src={project.imgUrl}
                           alt=""
-                        />
+                        /> */}
                       </div>
                       <div className="max-w-xs">
                         <h3 className="text-3xl mb-6 tracking-tight leading-none">
@@ -107,7 +117,7 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
-              <div className="h-full py-12 px-6 lg:px-8 xl:px-12 border rounded-3xl max-w-md mx-auto flex flex-col justify-between">
+              <div className="h-full py-12 px-6 lg:px-8 xl:px-12 border rounded-3xl mx-auto">
                 <h4 className="text-2xl xl:text-3xl mb-8">
                   What if my business partner doesn&apos;t appear in search
                   results when I try to add them as?
@@ -122,7 +132,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
-              <div className="h-full py-12 px-6 lg:px-8 xl:px-12 border rounded-3xl max-w-md mx-auto">
+              <div className="h-full py-12 px-6 lg:px-8 xl:px-12 border rounded-3xl mx-auto">
                 <h4 className="text-2xl xl:text-3xl mb-8">
                   Do I need to use the Paid Partnership label for things like
                   free trips or gifted product?
@@ -137,7 +147,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full lg:w-1/3 px-4">
-              <div className="h-full py-12 px-6 lg:px-8 xl:px-12 border rounded-3xl max-w-md mx-auto">
+              <div className="h-full py-12 px-6 lg:px-8 xl:px-12 border rounded-3xl mx-auto">
                 <h4 className="text-2xl xl:text-3xl mb-8">
                   How can I enable brands to promote my posts?
                 </h4>
@@ -148,6 +158,81 @@ export default function Home() {
                   <span className="mr-4">Learn more</span>
                   {/* arrow icon */}
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative py-36 bg-black overflow-hidden">
+        <Image
+          className="top-0 left-0 w-full h-full object-cover bg-black bg-opacity-30 z-30"
+          src="/cta-banner.jpg"
+          alt="call to action"
+          layout="fill"
+        />
+        <div className="relative container mx-auto px-4 z-40">
+          <div className="lg:max-w-3xl mx-auto text-center">
+            <h1 className="font-heading text-5xl sm:text-8xl xl:text-10xl text-white tracking-tighter mb-14">
+              Laat je creativiteit de vrije loop
+            </h1>
+            <a
+              className="group inline-flex mb-3 sm:mb-0 sm:mr-4 py-5 px-8 text-black hover:text-white leading-none items-center justify-center bg-white hover:bg-black rounded-full transition duration-150"
+              href="#"
+            >
+              <span className="mr-2.5">Vraag offerte aan</span>
+              <span className="group-hover:rotate-45 transform transition duration-75">
+                <BiArrowFromBottom />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-12 md:py-24 bg-coolGray-50 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <h1 className="font-heading text-6xl md:text-10xl tracking-tighter mb-20">
+            Partners
+          </h1>
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full lg:w-4/12 px-4 order-last lg:order-first">
+              <div>
+                {testimonials.map((testimonial, index) => (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      setSelectedTesimonial(testimonial);
+                      setSelectedIndex(index);
+                    }}
+                    className={cn(
+                      "block mb-8 py-6 px-6 text-left rounded-3xl hover:bg-white hover:shadow-lg transition duration-150  shadow-lg",
+                      `${selectedIndex === index ? "shadow-lg" : "shadow-none"}`
+                    )}
+                  >
+                    <div className="flex items-center">
+                      <div className="block bg-gray-400 h-16 w-16 mr-6 rounded-full"></div>
+                      <div>
+                        <span className="block font-semibold mb-1 text-black">
+                          {testimonial.name}
+                        </span>
+                        <span className="block text-sm text-coolGray-600">
+                          {testimonial.position}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="w-full lg:w-8/12 px-4">
+              <div className="max-w-xl lg:max-w-lg xl:max-w-3xl lg:ml-auto pt-8">
+                <div className="block">
+                  <h3 className="text-2xl font-semibold mb-5">
+                    {selectedTesimonial.comment.title}
+                  </h3>
+                  <p className="text-xl leading-normal mb-10">
+                    {selectedTesimonial.comment.message}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

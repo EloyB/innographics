@@ -1,11 +1,14 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { IoClose } from "react-icons/io5";
 import { TbMenu } from "react-icons/tb";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -13,10 +16,12 @@ const Navbar = () => {
         <div className="container mx-auto px-8 bg-transparent">
           <div className="flex h-24 items-center">
             <Image
+              onClick={() => router.push("/")}
               src={"/logo-text.svg"}
               alt="innographics logo"
               width={250}
               height={18}
+              className="cursor-pointer"
             />
             <button
               onClick={() => setOpen(!open)}
@@ -31,9 +36,9 @@ const Navbar = () => {
               >
                 Over ons
               </Link>
-              <a className="inline-block hover:underline mr-10" href="#">
+              {/* <a className="inline-block hover:underline mr-10" href="#">
                 Prijzen
-              </a>
+              </a> */}
               <Link
                 className="inline-block hover:underline mr-10"
                 href="/contact"
@@ -67,35 +72,37 @@ const Navbar = () => {
         ></div>
         <nav className="relative flex flex-col py-6 px-10 w-full h-full bg-white overflow-y-auto">
           <div className="flex mb-auto items-center">
-            <a className="inline-block mr-auto" href="#">
-              <img
-                className="h-4"
-                src="asitrastudio-assets/logos/logo-asi.svg"
-                alt=""
-              />
-            </a>
-            <button>{/* close icon */}</button>
+            <button onClick={() => setOpen(false)}>
+              <IoClose />
+            </button>
           </div>
           <div className="py-12 mb-auto">
             <ul className="flex-col">
               <li className="mb-6">
-                <Link className="inline-block text-black" href="#">
-                  About
+                <Link
+                  onClick={() => setOpen(false)}
+                  className="inline-block text-black"
+                  href="/about-us"
+                >
+                  Over ons
                 </Link>
               </li>
               <li className="mb-6">
-                <Link className="inline-block text-black" href="#">
-                  Services
+                <Link
+                  onClick={() => setOpen(false)}
+                  className="inline-block text-black"
+                  href="/contact"
+                >
+                  Contact
                 </Link>
               </li>
               <li className="mb-6">
-                <Link className="inline-block text-black" href="#">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link className="inline-block text-black" href="#">
-                  Contact us
+                <Link
+                  onClick={() => setOpen(false)}
+                  className="inline-block text-black"
+                  href="/faq"
+                >
+                  FAQ
                 </Link>
               </li>
             </ul>
