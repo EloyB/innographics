@@ -8,7 +8,7 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 xl:w-5/12 px-4 mb-16 lg:mb-0">
             <div className="max-w-lg mx-auto lg:mx-0">
               <h1 className="font-heading text-6xl xs:text-8xl sm:text-9xl xl:text-10xl tracking-tighter mb-20">
-                Let's talk
+                Let&apos;s talk
               </h1>
               <div className="sm:flex mb-10">
                 <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">

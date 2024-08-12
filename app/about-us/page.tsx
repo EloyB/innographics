@@ -47,8 +47,8 @@ const AboutUs = () => {
                   <h4 className="text-3xl mt-1 mb-6">Joost De Bie</h4>
                   <p className="text-lg text-coolGray-500">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&apos;s standard dummy text ever since the 1500s
                   </p>
                 </div>
               </div>
@@ -65,8 +65,8 @@ const AboutUs = () => {
                   <h4 className="text-3xl mt-1 mb-6">Senne Vercammen</h4>
                   <p className="text-lg text-coolGray-500">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s
+                    typesetting industry. Lorem Ipsum has been the
+                    industry&apos;s standard dummy text ever since the 1500s
                   </p>
                 </div>
               </div>
