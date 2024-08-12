@@ -109,8 +109,8 @@ export default function Home() {
             <div className="w-full lg:w-1/3 px-4 mb-6 lg:mb-0">
               <div className="h-full py-12 px-6 lg:px-8 xl:px-12 border rounded-3xl max-w-md mx-auto flex flex-col justify-between">
                 <h4 className="text-2xl xl:text-3xl mb-8">
-                  What if my business partner doesn't appear in search results
-                  when I try to add them as?
+                  What if my business partner doesn&apos;t appear in search
+                  results when I try to add them as?
                 </h4>
                 <a
                   className="group inline-flex items-center leading-none font-medium pb-2 border-b-2 border-black"
