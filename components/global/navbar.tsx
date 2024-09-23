@@ -36,25 +36,15 @@ const Navbar = () => {
               >
                 Over ons
               </Link>
-              {/* <a className="inline-block hover:underline mr-10" href="#">
-                Prijzen
-              </a> */}
-              <Link
-                className="inline-block hover:underline mr-10"
-                href="/contact"
-              >
-                Contact
-              </Link>
               <Link className="inline-block hover:underline" href="/faq">
                 FAQ
               </Link>
             </div>
             <a
               className="group hidden lg:inline-flex py-4 px-8 items-center justify-center leading-none font-medium text-black hover:text-white border border-black rounded-full hover:bg-black transition duration-200"
-              href="#"
+              href="/contact"
             >
-              <span className="mr-2">Offerte aanvragen</span>
-              {/* arrow icon */}
+              <span className="mr-2">Contacteer ons</span>
             </a>
           </div>
         </div>

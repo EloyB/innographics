@@ -99,13 +99,13 @@ export default function Home() {
       {/* FAQ */}
       <section className="py-12 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-0">
-          <div className="flex flex-wrap mb-20 lg:mb-32 items-center">
+          <div className="flex mb-10 lg:mb-32 items-center">
             <div className="w-full sm:w-1/2 px-4 mb-8 sm:mb-0">
               <h1 className="font-heading text-5xl md:text-6xl lg:text-10xl tracking-tighter pt-4">
                 FAQ
               </h1>
             </div>
-            <div className="w-full sm:w-1/2 px-4 text-right">
+            <div className="hidden sm:block w-full sm:w-1/2 px-4 text-right">
               <a
                 className="group inline-flex items-center justify-center py-5 px-8 text-base leading-none border-2 border-black font-medium text-black hover:text-white hover:bg-black rounded-full transition duration-200"
                 href="#"
@@ -161,6 +161,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="block sm:hidden w-full px-4 mt-8">
+            <a
+              className="group inline-flex items-center justify-center py-5 px-8 text-base leading-none border-2 border-black font-medium text-black hover:text-white hover:bg-black rounded-full transition duration-200"
+              href="#"
+            >
+              <span className="mr-4">Go to all questions</span>
+              <IoIosArrowRoundForward className="w-6 h-auto" />
+            </a>
+          </div>
         </div>
       </section>
       <section className="relative py-36 bg-black overflow-hidden">
@@ -180,61 +189,10 @@ export default function Home() {
               href="#"
             >
               <span className="mr-2.5">Vraag offerte aan</span>
-              <span className="group-hover:rotate-45 transform transition duration-75">
-                <BiArrowFromBottom />
+              <span>
+                <IoIosArrowRoundForward className="w-6 h-auto" />
               </span>
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative py-12 md:py-24 bg-coolGray-50 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <h1 className="font-heading text-6xl md:text-10xl tracking-tighter mb-20">
-            Partners
-          </h1>
-          <div className="flex flex-wrap -mx-4">
-            <div className="w-full lg:w-4/12 px-4 order-last lg:order-first">
-              <div>
-                {testimonials.map((testimonial, index) => (
-                  <div
-                    key={index}
-                    onClick={() => {
-                      setSelectedTesimonial(testimonial);
-                      setSelectedIndex(index);
-                    }}
-                    className={cn(
-                      "block mb-8 py-6 px-6 text-left rounded-3xl hover:bg-white hover:shadow-lg transition duration-150  shadow-lg",
-                      `${selectedIndex === index ? "shadow-lg" : "shadow-none"}`
-                    )}
-                  >
-                    <div className="flex items-center">
-                      <div className="block bg-gray-400 h-16 w-16 mr-6 rounded-full"></div>
-                      <div>
-                        <span className="block font-semibold mb-1 text-black">
-                          {testimonial.name}
-                        </span>
-                        <span className="block text-sm text-coolGray-600">
-                          {testimonial.position}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="w-full lg:w-8/12 px-4">
-              <div className="max-w-xl lg:max-w-lg xl:max-w-3xl lg:ml-auto pt-8">
-                <div className="block">
-                  <h3 className="text-2xl font-semibold mb-5">
-                    {selectedTesimonial.comment.title}
-                  </h3>
-                  <p className="text-xl leading-normal mb-10">
-                    {selectedTesimonial.comment.message}
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

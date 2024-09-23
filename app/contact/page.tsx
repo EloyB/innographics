@@ -1,4 +1,5 @@
 import React from "react";
+import { FiFacebook, FiLinkedin, FiMail, FiPhone } from "react-icons/fi";
 
 const Contact = () => {
   return (
@@ -10,61 +11,52 @@ const Contact = () => {
               <h1 className="font-heading text-6xl xs:text-8xl sm:text-9xl xl:text-10xl tracking-tighter mb-20">
                 Let&apos;s talk
               </h1>
-              <div className="sm:flex mb-10">
-                <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
-                  {/* Mail icon */}
+              <div className="grid grid-cols-2 md:grid-cols-1 gap-8 md:gap-10">
+                <div className="sm:flex bg-white md:bg-transparent md:p-0 rounded-3xl p-8">
+                  <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
+                    <FiMail />
+                  </div>
+                  <div className="mt-6 sm:mt-0 sm:ml-6">
+                    <span className="block text-lg font-semibold mb-5">
+                      Email ons
+                    </span>
+                    <span className="text-lg font-medium">
+                      info@innographics.be
+                    </span>
+                  </div>
                 </div>
-                <div className="mt-6 sm:mt-0 sm:ml-6">
-                  <span className="block text-lg font-medium mb-5">
-                    Email ons
-                  </span>
-                  <span className="text-lg font-medium">
-                    <a
-                      href="/cdn-cgi/l/email-protection"
-                      className="__cf_email__"
-                      data-cfemail="d9bab6b7adb8baad99bca1b8b4a9b5bcf7bab6b4"
-                    >
-                      <span
-                        className="__cf_email__"
-                        data-cfemail="761f181019361f181819110417061e1f1505581413"
-                      >
-                        [email protected]
-                      </span>
-                    </a>
-                  </span>
+                <div className="sm:flex bg-white md:bg-transparent md:p-0 rounded-3xl p-8">
+                  <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
+                    <FiPhone />
+                  </div>
+                  <div className="mt-6 sm:mt-0 sm:ml-6">
+                    <span className="block text-lg font-semibold mb-5">
+                      Bel ons
+                    </span>
+                    <span className="text-lg font-medium">+48 291 821 114</span>
+                  </div>
                 </div>
-              </div>
-              <div className="sm:flex mb-10">
-                <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
-                  {/* Call icon */}
+                <div className="sm:flex bg-white md:bg-transparent md:p-0 rounded-3xl p-8">
+                  <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
+                    <FiFacebook />
+                  </div>
+                  <div className="mt-6 sm:mt-0 sm:ml-6">
+                    <span className="block text-lg font-semibold mb-5">
+                      Facebook
+                    </span>
+                    <span className="text-lg font-medium">Innographics</span>
+                  </div>
                 </div>
-                <div className="mt-6 sm:mt-0 sm:ml-6">
-                  <span className="block text-lg font-medium mb-5">
-                    Bel ons
-                  </span>
-                  <span className="text-lg font-medium">+48 291 821 114</span>
-                </div>
-              </div>
-              <div className="sm:flex mb-10">
-                <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
-                  {/* Facebook icon */}
-                </div>
-                <div className="mt-6 sm:mt-0 sm:ml-6">
-                  <span className="block text-lg font-medium mb-5">
-                    Facebook
-                  </span>
-                  <span className="text-lg font-medium">Innographics</span>
-                </div>
-              </div>
-              <div className="sm:flex mb-10">
-                <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
-                  {/* Linkedin icon */}
-                </div>
-                <div className="mt-6 sm:mt-0 sm:ml-6">
-                  <span className="block text-lg font-medium mb-5">
-                    LinkedIn
-                  </span>
-                  <span className="text-lg font-medium">Innographics</span>
+                <div className="sm:flex bg-white md:bg-transparent md:p-0 rounded-3xl p-8">
+                  <div className="flex h-12 w-12 items-center justify-center border border-coolGray-400 rounded-2xl">
+                    <FiLinkedin />
+                  </div>
+                  <div className="mt-6 sm:mt-0 sm:ml-6">
+                    <span className="block text-lg font-semibold mb-5">
+                      LinkedIn
+                    </span>
+                    <span className="text-lg font-medium">Innographics</span>
+                  </div>
                 </div>
               </div>
             </div>
